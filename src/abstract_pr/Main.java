@@ -1,4 +1,4 @@
-package abstract_practice_1;
+package abstract_pr;
 import java.io.IOException;
 
 abstract class Beverage {
