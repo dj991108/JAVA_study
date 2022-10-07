@@ -1,5 +1,6 @@
 package rxp;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Computer extends Player{
@@ -7,9 +8,10 @@ public class Computer extends Player{
 		super(name);
 	}
 
+
 	Scanner s = new Scanner(System.in);
 	
-	@Override
+	@Override	
 	public String next() {
 		
 		this.lastBet = this.bet[(int)(Math.random()/3)];
