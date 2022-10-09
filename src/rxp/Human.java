@@ -7,6 +7,7 @@ public class Human extends Player {
 	protected Human(String name) {
 		super(name);
 	}
+		
 	private String hbet;
 	private void sethbet(String bet) {
 		this.hbet = bet;
@@ -14,21 +15,25 @@ public class Human extends Player {
 	private String gethbet() {
 		return this.hbet;
 	}
-
-	//private String name = super.getName();;
 	@Override
 	public String next() {
 		System.out.print(this.name+">>");
 		sethbet(s.next());
 		
-		if(this.gethbet().equalsIgnoreCase("묵")) {
-			return this.lastBet = super.bet[0];
+		if(this.gethbet().equals("묵")) {
+			this.lastBet = this.bet[0];
+			System.out.print(this.lastBet);
+			return this.lastBet;
 		}
-		else if(this.gethbet().equalsIgnoreCase("찌")) {
-			return this.lastBet = super.bet[1];
+		else if(this.gethbet().equals("찌")) {
+			this.lastBet = this.bet[1];
+			System.out.print(this.lastBet);
+			return this.lastBet;
 		}
-		else if(this.gethbet().equalsIgnoreCase("빠")) {
-			return this.lastBet = super.bet[2];
+		else if(this.gethbet().equals("빠")) {
+			this.lastBet = this.bet[2];
+			System.out.print(this.lastBet);
+			return this.lastBet;
 		}
 		else {
 			return "다시 입력하시오";
